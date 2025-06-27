@@ -1,4 +1,4 @@
-# Sistema GUI - Grupo World Beauty (ATVIII)
+# Sistema GUI - Grupo World Beauty (ATVIV)
 
 Este repositório contém o pré-projeto e a refatoração do desenvolvimento da interface gráfica do sistema de gerenciamento de clientes, produtos e consumo do Grupo World Beauty (WB). O objetivo foi transformar a aplicação, originalmente construída com componentes de classe, para utilizar componentes de função e Hooks, modernizando o código e alinhando-o às práticas atuais do React.
 
