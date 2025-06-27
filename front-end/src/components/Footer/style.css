@@ -1,0 +1,38 @@
+.container-footer {
+  background-color: var(--white);
+  color: var(--purple-dark);
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 3px solid var(--purple);
+  font-family: 'Poppins', sans-serif;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--purple-dark);
+}
+
+.container-icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.icon {
+  color: var(--purple-dark);
+  transition: transform 0.2s ease, color 0.3s ease;
+  font-size: 1.5rem;
+}
+
+.icon:hover {
+  color: var(--hover);
+  transform: scale(1.2);
+}
+
+.footer-copy {
+  font-size: 0.9rem;
+  color: var(--purple);
+}

@@ -1,0 +1,133 @@
+:root {
+  --roxo-principal: #6a0dad;
+  --roxo-claro: #9d4edd;
+  --roxo-sombra: #dcd0ff;
+  --branco: #ffffff;
+  --texto-escuro: #1c1c1c;
+  --sombra-clara: rgba(106, 13, 173, 0.1);
+}
+
+.container-estatisticas {
+  padding: 50px 5%;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--branco);
+}
+
+h2 {
+  margin-bottom: 20px;
+  color: var(--roxo-principal);
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.table-component-listagem {
+  overflow-x: auto;
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px var(--sombra-clara);
+  background: var(--branco);
+  margin-bottom: 30px;
+}
+
+.table-component-listagem table {
+  width: 100%;
+  min-width: 600px;
+  table-layout: auto;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.table-component-listagem thead {
+  position: sticky;
+  top: 0;
+  background-color: var(--roxo-principal);
+  color: var(--branco);
+  z-index: 1;
+}
+
+.table-component-listagem thead th {
+  padding: 15px 20px;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.table-component-listagem tbody tr {
+  border-bottom: 1px solid var(--roxo-sombra);
+  transition: background-color 0.2s;
+}
+
+.table-component-listagem tbody tr:hover {
+  background-color: var(--roxo-sombra);
+}
+
+.table-component-listagem tbody tr:last-child {
+  border-bottom: none;
+}
+
+.table-component-listagem tbody td {
+  padding: 12px 20px;
+  vertical-align: middle;
+  color: var(--texto-escuro);
+  font-size: 0.95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.title-top-10,
+.title-top-10-valor {
+  border-left: 5px solid var(--roxo-claro);
+  padding-left: 10px;
+  font-weight: 600;
+  color: var(--roxo-principal);
+}
+
+.title-top-10 {
+  margin-bottom: 20px;
+}
+
+.title-top-10-valor {
+  margin: 60px 0 20px;
+}
+
+/* RESPONSIVIDADE */
+@media screen and (max-width: 768px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .table-component-listagem table {
+    min-width: 100%;
+  }
+
+  .table-component-listagem thead th,
+  .table-component-listagem tbody td {
+    padding: 10px;
+    font-size: 0.85rem;
+  }
+
+  .title-top-10,
+  .title-top-10-valor {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .container-estatisticas {
+    padding: 30px 3%;
+  }
+
+  .table-component-listagem {
+    border-radius: 12px;
+  }
+
+  .title-top-10,
+  .title-top-10-valor {
+    font-size: 0.9rem;
+  }
+}

@@ -1,0 +1,142 @@
+/* Fonte clean */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+:root {
+  --primary: #a855f7;
+  --primary-dark: #7e22ce;
+  --bg: #f9f5ff;
+  --text: #3b0764;
+  --white: #ffffff;
+}
+
+/* Container principal */
+.container-header {
+  background-color: #ffffff;
+  border-bottom: 2px solid #e5e7eb;
+  color: #1f2937;
+  padding: 1rem 2rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  z-index: 1000;
+}
+
+/* Layout interno */
+.header-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+.logo h1 {
+  font-size: 1.8rem;
+  color: var(--primary-dark);
+  font-weight: 700;
+  margin: 0;
+  transition: transform 0.2s ease;
+}
+
+.logo h1:hover {
+  transform: scale(1.05);
+}
+
+/* Menu desktop */
+.menu {
+  display: flex;
+}
+
+.menu ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: var(--text);
+  font-weight: 600;
+  position: relative;
+  padding: 0.25rem 0;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary);
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: var(--primary);
+}
+
+.menu ul li a:hover::after {
+  width: 100%;
+}
+
+/* Botão hamburguer */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  z-index: 1100;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background-color: var(--primary-dark);
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+
+.menu-toggle.open .bar:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.open .bar:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open .bar:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--white);
+    border-top: 1px solid #e5e7eb;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+  }
+
+  .menu.open {
+    display: flex;
+  }
+
+  .menu ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+}

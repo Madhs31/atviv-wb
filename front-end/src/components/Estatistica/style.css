@@ -1,0 +1,79 @@
+.session-estatistica {
+  color: var(--primary);
+  background-color: var(--light-brown);
+  padding: 40px 5%;
+  width: auto;
+  text-align: center;
+}
+
+.session-estatistica h2 {
+  font-size: 2.4rem;
+  color: #7e22ce;
+  margin-bottom: 40px;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px rgba(126, 34, 206, 0.2);
+}
+
+.session-estatistica p {
+  color: black;
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto 30px auto; /* Centraliza o parágrafo */
+}
+
+.card-estatistica {
+  background-color: var(--white);
+  padding: 24px 5%;
+  border-radius: 10px;
+  color: var(--secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 20px;
+  box-shadow: 8px 6px 17px -5px rgba(64, 29, 16, 0.2);
+  transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.card-estatistica:hover {
+  background-color: var(--shade);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+}
+
+.text-estatistica {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 16px;
+  color: var(--secondary);
+}
+
+.card-button {
+  background-color: #7e22ce;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #a855f7;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .text-estatistica {
+    max-width: 100%;
+  }
+
+  .session-estatistica h2 {
+    font-size: 2rem;
+  }
+
+  .session-estatistica p {
+    font-size: 14px;
+  }
+}

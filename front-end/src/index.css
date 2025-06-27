@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --white: #ffffff;
+  --purple-light: #f4eefc;
+  --purple: #a855f7;
+  --purple-dark: #7e22ce;
+  --hover: #c084fc;
+  --text-dark: #1C1C1E;
+  --gray-border: #e5e7eb;
+}
+
+body {
+  color: var(--text-dark);
+  background-color: var(--white);
+  font-family: "Poppins", sans-serif;
+  font-size: 1rem; /* tamanho base ajustável */
+  font-weight: 400;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Tipografia responsiva */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p, li, a {
+  font-size: 1rem;
+}
+
+/* Navegação e listas */
+ul,
+nav {
+  list-style-type: none;
+  padding: 0;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: var(--text-dark);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--purple);
+}
+
+/* Responsividade geral */
+@media (max-width: 1024px) {
+  body {
+    font-size: 0.95rem;
+  }
+
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 0.85rem;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+  }
+}
