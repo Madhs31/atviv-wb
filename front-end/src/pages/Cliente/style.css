@@ -1,3 +1,22 @@
+:root {
+  --primary: #ffffff;
+  --secondary: #a855f7;
+  --secondary-dark: #7e22ce;
+  --hover: #c084fc;
+  --gray-light: #f4eefc;
+  --gray: #e5e7eb;
+  --text-dark: #1C1C1E;
+  --text-light: #666;
+  --danger: #e74c3c;
+  --danger-hover: #c0392b;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--primary);
+  color: var(--text-dark);
+}
+
 .container-tipos {
   padding: 50px 5%;
   display: flex;
@@ -7,163 +26,178 @@
 }
 
 .container-cli-pro-ser h2 {
-  margin-bottom: 20px;
-  color: var(--light-brown);
-  font-size: 2rem;
+  margin-bottom: 10px;
+  font-size: 2.2rem;
+  color: var(--secondary-dark);
 }
 
 .search-session {
   display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
   align-items: center;
   justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
 }
 
-.search-bar {
-  width: 80%;
+.input-busca {
+  padding: 10px 16px;
+  border: 1px solid var(--gray);
+  border-radius: 10px;
+  flex: 1;
+  min-width: 200px;
+  font-size: 15px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.input-busca:focus {
+  border-color: var(--secondary);
+  box-shadow: 0 0 0 2px rgba(168, 85, 247, 0.3);
+}
+
+.genero-dropdown {
+  padding: 10px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--gray);
+  background-color: var(--secondary);
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  cursor: pointer;
+  min-width: 130px;
+  transition: all 0.3s ease;
+}
+
+.genero-dropdown:hover {
+  background-color: var(--hover);
 }
 
 .button-cadastro {
-  background-color: var(--light-brown);
-  display: flex;
-  align-items: center;
+  background-color: var(--secondary);
   color: var(--primary);
-  padding: 15px 25px;
-  border-radius: 20px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 8px 6px 17px -5px rgba(64, 29, 16, 0.2);
+  padding: 12px 24px;
+  border-radius: 12px;
   font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   white-space: nowrap;
 }
 
 .button-cadastro:hover {
-  background-color: var(--secondary);
+  background-color: var(--hover);
   transform: translateY(-2px);
-  box-shadow: 8px 8px 20px -5px rgba(64, 29, 16, 0.3);
 }
 
 .table-component {
   overflow-x: auto;
+  background: var(--primary);
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  max-height: 65vh;
+}
+
+table {
   width: 100%;
-  border-radius: 20px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  background: var(--white);
-  max-height: 60vh;
-  scrollbar-width: thin;
-  scrollbar-color: var(--light-brown) transparent;
-}
-
-.table-component::-webkit-scrollbar {
-  width: 8px;
-  height: 8px;
-}
-
-.table-component::-webkit-scrollbar-thumb {
-  background-color: var(--light-brown);
-  border-radius: 10px;
-}
-
-.container-tipos table {
-  width: 100%;
-  min-width: 600px; /* força scroll horizontal em telas pequenas */
-  table-layout: fixed;
   border-collapse: collapse;
-  text-align: left;
+  min-width: 900px;
 }
 
-.container-tipos table thead {
+thead {
+  background-color: var(--secondary);
+  color: white;
   position: sticky;
   top: 0;
-  background-color: var(--light-brown);
-  color: var(--primary);
+  z-index: 2;
 }
 
-.container-tipos table thead th {
-  padding: 15px 20px;
-  font-weight: 600;
-}
-
-.container-tipos table tbody tr {
-  border-bottom: 1px solid var(--shade);
-  transition: background-color 0.2s;
-}
-
-.container-tipos table tbody tr:hover {
-  background-color: var(--shade);
-}
-
-.container-tipos table tbody td {
-  padding: 12px 20px;
-  vertical-align: middle;
-}
-
-.dropdown-filter {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  flex-wrap: wrap;
-}
-
-.genero-dropdown {
-  padding: 6px 12px;
-  border-radius: 8px;
-  border: 1px solid var(--gray);
-  background-color: var(--light-brown);
-  color: white;
-  cursor: pointer;
+thead th {
+  padding: 16px 20px;
   font-size: 14px;
-  transition: all 0.3s ease;
-  font-weight: 500;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
 }
 
-.genero-dropdown:hover {
-  border-color: var(--secondary);
-  background-color: var(--secondary);
+tbody tr {
+  border-bottom: 1px solid var(--gray);
+  transition: background 0.2s ease;
 }
 
-.genero-dropdown:focus {
-  outline: none;
-  border-color: var(--light-brown);
-  box-shadow: 0 0 0 3px rgba(194, 158, 120, 0.3);
+tbody tr:hover {
+  background-color: var(--gray-light);
 }
 
-/* RESPONSIVIDADE */
+tbody td {
+  padding: 14px 20px;
+  font-size: 15px;
+  color: var(--text-dark);
+  vertical-align: top;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.botao-excluir {
+  background-color: var(--danger);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-excluir:hover {
+  background-color: var(--danger-hover);
+}
+
 @media (max-width: 768px) {
   .search-session {
     flex-direction: column;
     align-items: stretch;
   }
 
-  .search-bar {
-    width: 100%;
-  }
-
+  .input-busca,
+  .genero-dropdown,
   .button-cadastro {
-    justify-content: center;
     width: 100%;
   }
 
-  .container-tipos table {
-    font-size: 12px;
-  }
-
-  .container-tipos table thead th,
-  .container-tipos table tbody td {
-    padding: 10px 8px;
-  }
-
-  .dropdown-filter {
-    justify-content: center;
-  }
-
-  .genero-dropdown {
-    width: 100%;
+  table {
     font-size: 13px;
   }
 
-  .table-component {
-    max-height: 50vh;
+  thead th,
+  tbody td {
+    padding: 12px 12px;
   }
+
+  .table-component {
+    max-height: 55vh;
+  }
+}
+
+/* Botão editar */
+.botao-editar {
+  background-color: var(--secondary);
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.botao-editar:hover {
+  background-color: var(--secondary-dark);
+}
+
+.ultimacoluna {
+  display: flex;
+  gap: 8px; /* espaço entre os botões */
+  justify-content: center; /* centraliza os botões na célula */
+  align-items: center;
 }

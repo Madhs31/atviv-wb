@@ -3,14 +3,7 @@ package com.wb.wbbackend.entidades;
 import java.util.ArrayList;
 import java.util.List;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.OneToMany;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 import org.springframework.hateoas.RepresentationModel;
 
@@ -27,14 +20,22 @@ public class Cliente extends RepresentationModel<Cliente> {
 	
 	@Column
 	private String nome;
+
 	@Column
 	private String sobreNome;
+
 	@Column
 	private String email;
-	
+
+	@Column
+	private String cpf; // <-- Campo adicionado aqui
+
+	@Column
+	private String genero; // <-- Já adicione aqui o campo 'gênero' também
+
 	@OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
 	private Endereco endereco;
-	
+
 	@OneToMany(orphanRemoval = true, cascade = CascadeType.ALL)
 	private List<Telefone> telefones = new ArrayList<>();
 }
