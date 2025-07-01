@@ -1,53 +1,38 @@
-# Sistema GUI - Grupo World Beauty (ATVIV)
+# 💅 World Beauty - Front-End
 
-Este repositório contém o pré-projeto e a refatoração do desenvolvimento da interface gráfica do sistema de gerenciamento de clientes, produtos e consumo do Grupo World Beauty (WB). O objetivo foi transformar a aplicação, originalmente construída com componentes de classe, para utilizar componentes de função e Hooks, modernizando o código e alinhando-o às práticas atuais do React.
+Este é o front-end da aplicação **World Beauty**, desenvolvido com **React**, **TypeScript**, **Vite** e **Tailwind CSS**. Esta interface permite o gerenciamento visual de clientes, produtos e consumo de serviços.
 
-## 👨‍🏫 Projeto proposto por:
-**Prof. Dr. Eng. Gerson Penha**
+## 🚀 Tecnologias Utilizadas
 
-## 🎯 Objetivo
-
-- Refatorar uma GUI (Graphical User Interface) funcional e responsiva para o sistema do Grupo WB.
-- Converter todos os componentes de classe para componentes de função.
-- Aplicar Hooks para gerenciamento de estado e ciclo de vida.
-- Focar na usabilidade e experiência do usuário (UI Design).
-
-## 📦 Tecnologias Utilizadas
-
-- **React 16.8+ (com Hooks) e React 18 (para createRoot):** Biblioteca JavaScript para construção de interfaces de usuário, utilizando componentes de função e o sistema de Hooks.
-- **MaterializeCSS 1.0.0:** Pode ser substituído por outro framework frontend, se necessário.
-- **TypeScript**
-- **HTML e CSS**
-- **Visual Studio Code (VSCode)**
-
-## 📱 Requisitos
-
-- A aplicação deve ser responsiva (adaptável a dispositivos móveis).
-- Todos os componentes React devem ser implementados como funções, utilizando Hooks para gerenciar estado e efeitos.
-- Não há necessidade de conexão com backend nesta fase.
-- O foco está nas telas e transições, compondo o pré-projeto refatorado.
+- [React](https://reactjs.org/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Vite](https://vitejs.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Axios](https://axios-http.com/)
 
 
-## 🚀 Como rodar o projeto localmente
+## ✨ Funcionalidades
 
+- Cadastrar clientes
+- Listar clientes
+- Excluir clientes
+- Navegação simples e moderna com Tailwind CSS
 
-Clone o repositório:
+## ⚙️ Instalação e Execução
+
+### Pré-requisitos
+
+- Node.js e npm instalados
+- Back-end em execução (veja o README da pasta `back-end`)
+
+### Passos:
+
 ```bash
-   git clone https://github.com/seu-usuario/atviii-wb
-   cd atviii-wb-typescript
-```
+# Navegar até a pasta do front-end
+cd front-end
 
-Instale as dependências:
-```bash
+# Instalar as dependências
 npm install
-```
 
-Inicie o servidor de desenvolvimento:
-```bash
-npm start
-```
-
-Acesse no navegador:
-```bash
-http://localhost:3000
-```
+# Iniciar o servidor de desenvolvimento
+npm run dev
