@@ -4,11 +4,14 @@ Este é o front-end da aplicação **World Beauty**, desenvolvido com **React**,
 
 ## 🚀 Tecnologias Utilizadas
 
-- [React](https://reactjs.org/)
-- [TypeScript](https://www.typescriptlang.org/)
-- [Vite](https://vitejs.dev/)
-- [Tailwind CSS](https://tailwindcss.com/)
-- [Axios](https://axios-http.com/)
+| Tecnologia             | Versão         | 
+|------------------------|----------------|
+| React                  | 18.0.0         | 
+| TypeScript             | 4.6.3          | 
+| Materialize CSS        | 1.0.0-rc.2     | 
+| React Scripts (CRA)    | 5.0.0          | 
+| Node.js                | 16.14.2        |
+| Axios (opcional)       | —              |
 
 
 ## ✨ Funcionalidades
